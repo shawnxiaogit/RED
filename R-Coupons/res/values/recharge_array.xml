@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ 	<string-array name="tern_type_array">
+ 	    <item>非单体超市</item>
+ 	    <item>单体超市</item>
+ 	    <item>真诚合作</item>
+ 	</string-array>
+ 	
+	<string-array name="groups">
+	    <item>基础成功图像</item>
+	    <item>品牌陈列</item>
+	    <item>补券</item>
+	</string-array>
+ 		
+ 	
+ 	<string-array name="base_succ_image_array">
+ 	    <item>冰箱</item>
+ 	    <item>主货架</item>
+ 	    <item>必备包装</item>
+ 	    <item>多点陈列</item>
+ 	    <item>生动化</item>
+ 	</string-array>
+ 	
+ 	<string-array name="brand_display_array">
+ 	    <item>13箱堆</item>
+ 	    <item>奶优4/8箱堆</item>
+ 	    <item>奶优彩虹陈列</item>
+ 	</string-array>
+ 	
+ 	<string-array name="re_ticket_array">
+ 	    <item>补券</item>
+ 	    <item>补券原因</item>
+ 	</string-array>
+ 	
+ 	
+ 	<string-array name="single_base_succ_image_array">
+     	<item>冰箱</item>
+ 	    <item>主货架</item>
+ 	    <item>必备包装</item>
+ 	    <item>多点陈列</item>
+ 	</string-array>
+ 	
+ 	
+ 	<string-array name="single_brand_display_array">
+ 	    <item>奶优果汁堆箱</item>
+ 	    <item>奶优果汁端架</item>
+ 	</string-array>
+ 	
+ 		
+</resources>

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <include layout="@layout/selft_title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="20.0dip"
+        android:background="@drawable/public_line" >
+
+        <!-- 终端类型 文本展示 -->
+
+        <TextView
+            android:id="@id/tv_term_type"
+            style="@style/place_data_coll_tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/et_term_type"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="7.0dip"
+            android:text="@string/tern_type" />
+
+        <!-- 终端类型输入框 -->
+
+        <AutoCompleteTextView
+            android:id="@id/et_term_type"
+            style="@style/place_data_coll_et_client_style"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_toRightOf="@id/tv_term_type"
+            android:background="@null"
+            android:enabled="false"
+            android:hint="@string/input_select_tern_type" />
+        <!-- 下拉按钮 -->
+
+        <ImageButton
+            android:id="@id/btn_term_type_drop_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/et_term_type"
+            android:layout_marginLeft="1.0dip"
+            android:background="@drawable/more_select" />
+    </RelativeLayout>
+
+    <!-- 真诚合作容器 -->
+
+    <LinearLayout
+        android:id="@+id/panel_hezuo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:orientation="vertical" 
+        android:visibility="gone"
+        >
+        
+        
+        <RelativeLayout
+            android:id="@+id/panel_hezuo_quanshu"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/public_line" 
+            android:layout_marginLeft="15.0dip"
+        	android:layout_marginRight="15.0dip"
+            >
+
+            <TextView
+                android:id="@+id/tv_hezuo_quanshu"
+                style="@style/place_data_coll_tv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:text="@string/txt_quanshu" />
+
+            <EditText
+                android:id="@+id/et_hezuo_quanshu"
+                style="@style/place_data_coll_et_client_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_toRightOf="@id/tv_hezuo_quanshu"
+                android:inputType="number"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:orientation="horizontal" 
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:id="@+id/tv_hezuo_item_name"
+                style="@style/place_data_coll_et_client_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="20.0dip"
+                android:text="本月实发券数:" />
+
+            <TextView
+                android:id="@+id/tv_hezuo_total_count"
+                style="@style/tv_item_name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10.0dip" />
+
+            <TextView
+                style="@style/place_data_coll_et_client_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10.0dip"
+                android:text="合计:" />
+
+            <TextView
+                android:id="@+id/tv_hezuo_total_money"
+                style="@style/tv_item_name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10.0dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btn_hezuo_get_recharge_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_btn_selector"
+                android:text="@string/consume_sure"
+                android:textColor="#ffffffff"
+                android:textSize="18.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/panel_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ExpandableListView
+            android:id="@+id/ex_lv"
+            android:layout_width="fill_parent"
+            android:layout_height="280.0dip"
+            android:background="#ffffff"
+            android:cacheColorHint="#00000000"
+            android:descendantFocusability="beforeDescendants"
+            android:groupIndicator="@null"
+            android:listSelector="#00000000" >
+        </ExpandableListView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:orientation="horizontal" 
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:id="@+id/tv_item_name"
+                style="@style/place_data_coll_et_client_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="20.0dip"
+                android:text="本月实发券数:" />
+
+            <TextView
+                android:id="@+id/tv_total_count"
+                style="@style/tv_item_name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10.0dip" />
+
+            <TextView
+                android:id="@+id/tv_item_name"
+                style="@style/place_data_coll_et_client_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10.0dip"
+                android:text="合计:" />
+
+            <TextView
+                android:id="@+id/tv_total_money"
+                style="@style/tv_item_name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10.0dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btn_get_recharge_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_btn_selector"
+                android:text="@string/consume_sure"
+                android:textColor="#ffffffff"
+                android:textSize="18.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:layout_marginTop="20.0dip"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@id/panel_card_num"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/public_line_top" >
+
+                <TextView
+                    android:id="@id/tv_card_num"
+                    style="@style/place_data_coll_tv_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="@string/consume_card_num" />
+
+                <EditText
+                    android:id="@+id/et_consume_card_num"
+                    style="@style/place_data_coll_et_client_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_toRightOf="@id/tv_card_num"
+                    android:focusable="false"
+                    android:hint="@string/scan_hint_tx" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/panel_card_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:background="@drawable/public_line_mid" >
+
+                <TextView
+                    android:id="@id/tv_card_pwd"
+                    style="@style/place_data_coll_tv_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="@string/consume_phone_num" />
+
+                <EditText
+                    android:id="@+id/et_consume_phone_num"
+                    style="@style/place_data_coll_et_client_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_toRightOf="@id/tv_card_pwd"
+                    android:hint="@string/input_consume_phone_num" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/panel_card_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:background="@drawable/public_line_mid" >
+
+                <TextView
+                    android:id="@id/tv_card_pwd"
+                    style="@style/place_data_coll_tv_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="@string/sum_of_recharge" />
+
+                <EditText
+                    android:id="@+id/et_sum_of_consume"
+                    style="@style/place_data_coll_et_client_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_toRightOf="@id/tv_card_pwd"
+                    android:hint="@string/input_sum_of_recharge" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/panel_select_date"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:background="@drawable/public_line_bottom" >
+
+                <TextView
+                    android:id="@id/tv_select_date"
+                    style="@style/place_data_coll_tv_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="@string/consume_pwd" />
+
+                <EditText
+                    android:id="@+id/et_consume_pwd"
+                    style="@style/place_data_coll_et_client_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_toRightOf="@id/tv_select_date"
+                    android:focusable="false"
+                    android:hint="@string/input_consume_pwd" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_marginTop="20.0dip"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <Button
+                        android:id="@id/btn_scan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/login_btn_selector"
+                        android:text="@string/scan_title"
+                        android:textColor="#ffffffff"
+                        android:textSize="18.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <Button
+                        android:id="@+id/btn_consume_sure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/login_btn_selector"
+                        android:text="@string/consume_sure"
+                        android:textColor="#ffffffff"
+                        android:textSize="18.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/panel_query_result"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:layout_marginTop="20.0dip"
+            android:gravity="center|right"
+            android:padding="2.0dip"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5.0dip"
+                android:paddingRight="5.0dip"
+                android:singleLine="true"
+                android:text="@string/your_remain"
+                android:textColor="@color/login_edittext_title"
+                android:textSize="20.0sp" />
+
+            <TextView
+                android:id="@id/tv_remain_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv1"
+                android:paddingLeft="5.0dip"
+                android:paddingRight="5.0dip"
+                android:singleLine="true"
+                android:text="@string/money_set"
+                android:textColor="@color/money_color"
+                android:textSize="20.0sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_remain_money"
+                android:paddingLeft="5.0dip"
+                android:paddingRight="5.0dip"
+                android:singleLine="true"
+                android:text="@string/money_unit"
+                android:textColor="@color/login_edittext_title"
+                android:textSize="20.0sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

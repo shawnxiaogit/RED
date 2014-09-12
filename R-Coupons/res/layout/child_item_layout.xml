@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60.0dip"
+	android:background="@drawable/public_line_mid"
+    android:gravity="center_vertical"
+    >
+<!-- android:descendantFocusability="blocksDescendants"  -->
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical" 
+        android:text="冰箱:"
+       	android:paddingLeft="20.0dip"
+       	style="@style/tv_item_name_style"
+        />
+
+    <EditText
+        android:id="@+id/et_count"
+        android:layout_width="wrap_content"
+        android:layout_height="30.0dip"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="60.0dip"
+       	android:hint="请输入"
+       	style="@style/place_data_coll_et_client_style"
+       	android:inputType="number"
+       	android:maxLength="5"
+        >
+	</EditText>
+    <TextView
+        android:layout_width="30.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="张"
+        android:gravity="center_vertical"
+        style="@style/tv_item_name_style" 
+        android:layout_marginRight="5.0dip"
+         />
+
+</RelativeLayout>

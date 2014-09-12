@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/selft_title_bar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="20.0dip"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_query_self"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_btn_selector"
+            android:text="@string/txt_query_self"
+            android:textColor="#ffffffff"
+            android:textSize="18.0sp" />
+        <Button
+            android:id="@+id/btn_query_all_employee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/login_btn_selector"
+            android:text="@string/txt_query_all_employee"
+            android:textColor="#ffffffff"
+            android:textSize="18.0sp" />
+        <Button
+            android:id="@+id/btn_query_some_employee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/login_btn_selector"
+            android:text="@string/txt_query_some_employee"
+            android:textColor="#ffffffff"
+            android:textSize="18.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/panel_query_by_employee_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="10.0dip"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/panel_card_num"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/public_line" >
+
+            <TextView
+                android:id="@+id/tv_card_num"
+                style="@style/place_data_coll_tv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:text="@string/employee_num" />
+
+            <EditText
+                android:id="@+id/et_employee_num"
+                style="@style/place_data_coll_et_client_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_toRightOf="@id/tv_card_num"
+                android:hint="@string/input_employee_num" />
+        </RelativeLayout>
+         <Button
+            android:id="@+id/btn_query_oper_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/login_btn_selector"
+            android:text="@string/txt_query_oper_detail"
+            android:textColor="#ffffffff"
+            android:textSize="18.0sp" />
+    </LinearLayout>
+
+</LinearLayout>

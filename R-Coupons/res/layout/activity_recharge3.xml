@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/selft_title_bar" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="40.0dip"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@id/panel_card_num"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/public_line_top" >
+
+            <TextView
+                android:id="@id/tv_card_num"
+                style="@style/place_data_coll_tv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:text="@string/consume_card_num" />
+
+            <TextView
+                android:id="@+id/tv_card_num_value"
+                style="@style/place_data_coll_et_client_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_toRightOf="@id/tv_card_num"
+                android:focusable="false"
+                />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/panel_recharge_count"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:background="@drawable/public_line_bottom" >
+
+            <TextView
+                android:id="@+id/tv_recharge_count"
+                style="@style/place_data_coll_tv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:text="@string/recharge_sum_of_consume" />
+
+            <EditText
+                android:id="@+id/tv_recharge_count_value"
+                style="@style/place_data_coll_et_client_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_toRightOf="@id/tv_recharge_count"
+                android:focusable="false"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btn_sure_recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_btn_selector"
+                android:text="@string/btn_txt_sure_recharge"
+                android:textColor="#ffffffff"
+                android:textSize="18.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/panel_cust_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:visibility="gone"
+            android:orientation="vertical" 
+            >
+
+            <RelativeLayout
+                android:id="@+id/panel_cust_info_cust_num"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:background="@drawable/public_line_top" >
+
+                <TextView
+                    android:id="@+id/tv_cust_info_cust_num"
+                    style="@style/place_data_coll_tv_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="@string/cust_info_cust_num" />
+
+                <TextView
+                    android:id="@+id/tv_cust_info_cust_num_value"
+                    style="@style/place_data_coll_et_client_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_toRightOf="@id/tv_cust_info_cust_num" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/panel_cust_info_cust_name"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:background="@drawable/public_line_mid" >
+
+                <TextView
+                    android:id="@+id/tv_cust_info_cust_name"
+                    style="@style/place_data_coll_tv_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="@string/cust_info_cust_name" />
+
+                <TextView
+                    android:id="@+id/tv_cust_info_cust_name_value"
+                    style="@style/place_data_coll_et_client_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_toRightOf="@id/tv_cust_info_cust_name" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/panel_cust_info_cust_yuer"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:background="@drawable/public_line_bottom" >
+
+                <TextView
+                    android:id="@+id/tv__cust_info_cust_yuer"
+                    style="@style/place_data_coll_tv_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="@string/cust_info_cust_yuer" />
+
+                <TextView
+                    android:id="@+id/tv__cust_info_cust_yuer_value"
+                    style="@style/place_data_coll_et_client_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_toRightOf="@id/tv__cust_info_cust_yuer" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/btn_consume_sure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_btn_selector"
+                    android:text="@string/btn_recharge_txt"
+                    android:textColor="#ffffffff"
+                    android:textSize="18.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/panel_query_result"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="20.0dip"
+        android:gravity="center|right"
+        android:padding="2.0dip"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="5.0dip"
+            android:singleLine="true"
+            android:text="@string/your_remain"
+            android:textColor="@color/login_edittext_title"
+            android:textSize="20.0sp" />
+
+        <TextView
+            android:id="@id/tv_remain_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv1"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="5.0dip"
+            android:singleLine="true"
+            android:text="@string/money_set"
+            android:textColor="@color/money_color"
+            android:textSize="20.0sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_remain_money"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="5.0dip"
+            android:singleLine="true"
+            android:text="@string/money_unit"
+            android:textColor="@color/login_edittext_title"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+     >
+    
+    <LinearLayout
+        android:id="@+id/panel_cancle_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="170.0dip"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="5.0dip"
+        >
+         	
+        <CheckBox
+         android:id="@+id/cb_cancle_consume"
+         style="@style/MyCheckBox"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/login_checkbox_title"
+         android:textSize="15.0sp" />
+		<!-- 
+        <Button
+            android:id="@id/btn_scan"
+            android:layout_width="80.0dip"
+            android:layout_height="50.0dip"
+            android:background="@drawable/login_btn_selector"
+            android:text="@string/scan_title"
+            android:textColor="#ffffffff"
+            android:textSize="18.0sp" />
+             -->
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+        android:id="@+id/panel_consume_detail"
+        android:layout_width="280.0dip"
+        android:layout_height="170.0dip"
+        android:orientation="vertical"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:layout_toRightOf="@+id/panel_cancle_cb"
+        android:gravity="center_vertical"
+        >
+        <RelativeLayout
+                android:id="@id/panel_card_num"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:background="@drawable/public_line_top" >
+
+                <TextView
+                    android:id="@id/tv_card_num"
+                    style="@style/place_data_coll_tv_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="@string/consume_time" />
+
+                <TextView
+                    android:id="@+id/tv_consume_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_card_num"
+                    style="@style/place_data_coll_et_client_style"
+                    android:focusable="false"
+                    />
+            </RelativeLayout>
+            
+         	<RelativeLayout
+                android:id="@id/panel_card_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:background="@drawable/public_line_mid" >
+
+                <TextView
+                    android:id="@id/tv_card_pwd"
+                    style="@style/place_data_coll_tv_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="@string/consume_card_num" />
+
+                <TextView
+                    android:id="@+id/tv_consume_card_num"
+                    style="@style/place_data_coll_et_client_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_card_pwd"
+                    />
+            </RelativeLayout>
+            
+         	<RelativeLayout
+                android:id="@id/panel_card_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:background="@drawable/public_line_mid" >
+
+                <TextView
+                    android:id="@id/tv_card_pwd"
+                    style="@style/place_data_coll_tv_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="@string/consume_phone_num" />
+
+                <TextView
+                    android:id="@+id/tv_consume_phone_num"
+                    style="@style/place_data_coll_et_client_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_card_pwd"
+                    />
+            </RelativeLayout>
+            
+         	<RelativeLayout
+                android:id="@id/panel_select_date"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:background="@drawable/public_line_bottom" >
+
+                <TextView
+                    android:id="@id/tv_select_date"
+                    style="@style/place_data_coll_tv_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="@string/sum_of_recharge" />
+
+                <TextView
+                    android:id="@+id/tv_sum_of_consume"
+                    style="@style/place_data_coll_et_client_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_select_date"
+                    android:focusable="false"
+                    />
+            </RelativeLayout>
+        
+        
+    </LinearLayout>
+    
+
+</RelativeLayout>
